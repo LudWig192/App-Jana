@@ -10,11 +10,11 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { useFonts, DeliusSwashCaps_400Regular } from "@expo-google-fonts/delius-swash-caps"
 
 //Menu SOBRE
-import TelaSobre from "../JanaEsmalteria/telas/Sobre"
+import TelaSobre from "./tela/Sobre"
 
 //Menu PRODUTOS
-import TelaProduto from "./telas/Produtos/Produto"
-import ListaProdutos from "./telas/mocks/listaProdutos"
+import TelaProduto from "./tela/Produtos/Produto"
+import ListaProdutos from "./tela/mocks/listaProdutos"
 
 function MenuProdutos(){
   return <TelaProduto {...ListaProdutos}/>
@@ -36,7 +36,7 @@ function Menu(){
                 }else if(route.name==="Perfil"){
                   iconName = focused ? 'person' : 'person-outline';
                 }
-                return <Ionicons name={iconName} size={size} color={color}/>
+                 return <Ionicons name={iconName} size={size} color={color}/>
               },
               headerShown: false,
               tabBarActiveTintColor: 'purple',
