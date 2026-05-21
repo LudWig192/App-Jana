@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const estilosProd = StyleSheet.create({
     corFundo: {
-        backgroundColor: "#9900CC",
+        backgroundColor: "#000000",
         paddingBottom: 50,
         paddingTop: 40,
     },
