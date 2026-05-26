@@ -9,11 +9,14 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 //Importação da Fonte
 import { useFonts, DeliusSwashCaps_400Regular } from "@expo-google-fonts/delius-swash-caps"
 
+// Menu PERFIL
+import TelaPerfil from "./tela/Perfil/Index"
+
 //Menu SOBRE
 import TelaSobre from "./tela/Sobre"
 
 //Menu PRODUTOS
-import TelaProduto from "./tela/Produtos/Produto"
+import TelaProduto from "./tela/Produtos/Index"
 import ListaProdutos from "./tela/mocks/listaProdutos"
 
 function MenuProdutos(){
@@ -45,7 +48,7 @@ function Menu(){
           >
             <Tab.Screen name="Sobre" component={TelaSobre}/>
             <Tab.Screen name="Produtos" component={MenuProdutos}/>
-            <Tab.Screen name="Perfil" component={TelaSobre}/>
+            <Tab.Screen name="Perfil" component={TelaPerfil}/>
         </Tab.Navigator>
 }
 

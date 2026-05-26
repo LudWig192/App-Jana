@@ -67,10 +67,9 @@ export default function Sobre() {
       {/* Imagem */}
       <View style={styles.imagemContainer}>
         <Image
-          source={require('../assets/Banner.png')}
+          source={require('../assets/logo.png')}
           style={styles.imagem}
           resizeMode="contain"
-           
         />
       </View>
 
@@ -102,81 +101,93 @@ export default function Sobre() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0D0D0D',
+    backgroundColor: '#ffc0dc',
   },
 
+  // HEADER
   header: {
     alignItems: 'center',
-    paddingTop: 40,
+    paddingTop: 20,
     paddingHorizontal: 20,
+    paddingBottom: 30,
+    backgroundColor: '#b82366',
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
     marginBottom: 20,
   },
 
   logo: {
-    width: 180,
-    height: 180,
-    marginBottom: 10,
+    width: 250,
+    height: 300,
+    marginBottom: -40,
   },
 
   titulo: {
     color: '#FFFFFF',
-    fontSize: 30,
+    fontSize: 32,
     fontWeight: 'bold',
     marginBottom: 8,
   },
 
   subtitulo: {
-    color: '#B3B3B3',
+    color: '#ffe3f0',
     fontSize: 16,
     textAlign: 'center',
     lineHeight: 24,
   },
 
+  // CARD
   card: {
-    backgroundColor: '#1A1A1A',
+    backgroundColor: '#FFFFFF',
     marginHorizontal: 20,
     padding: 20,
     borderRadius: 24,
     marginBottom: 25,
+    borderWidth: 2,
+    borderColor: '#ff96c5',
 
-    shadowColor: '#000',
+    shadowColor: '#f15aa4',
     shadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.25,
     shadowRadius: 5,
 
     elevation: 6,
   },
 
   texto: {
-    color: '#E5E5E5',
+    color: '#5a5a5a',
     fontSize: 16,
     lineHeight: 28,
     textAlign: 'justify',
   },
 
+  // IMAGEM
   imagemContainer: {
     alignItems: 'center',
-    marginBottom: 30,
+    marginBottom: 25,
   },
 
   imagem: {
-    width: 260,
-    height: 260,
-    borderRadius: 24,
+    width: 390,
+    height: 250,
+    borderRadius: 20,
+    borderWidth: 3,
+    borderColor: '#ff96c5',
   },
 
+  // VÍDEO
   videoContainer: {
     marginHorizontal: 20,
     marginBottom: 40,
   },
 
   videoTitulo: {
-    color: '#FFFFFF',
-    fontSize: 22,
-    fontWeight: '600',
+    color: '#f70071',
+    fontSize: 24,
+    fontWeight: '700',
     marginBottom: 16,
     textAlign: 'center',
   },
@@ -186,9 +197,10 @@ const styles = StyleSheet.create({
     height: 220,
     borderRadius: 20,
     overflow: 'hidden',
-    backgroundColor: '#1A1A1A',
+    backgroundColor: '#f15aa4',
   },
 
+  // FOOTER
   footer: {
     alignItems: 'center',
     paddingBottom: 40,
@@ -196,8 +208,9 @@ const styles = StyleSheet.create({
   },
 
   footerTexto: {
-    color: '#777',
-    fontSize: 13,
+    color: '#f70071',
+    fontSize: 16,
     textAlign: 'center',
+    fontWeight: '600',
   },
 });
