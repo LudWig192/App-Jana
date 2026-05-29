@@ -15,7 +15,7 @@ import Texto from '../componentes/Texto';
 export default function Sobre() {
   // Vídeo em loop
   const player = useVideoPlayer(
-    'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+    require('../assets/Video.mp4'),
     (player) => {
       player.loop = true;
     }
@@ -63,12 +63,36 @@ export default function Sobre() {
           cada cliente.
         </Texto>
       </View>
+      <Text style={styles.fundadoratitulo}>Nossa Fundadora</Text>
 
+      <Text style={styles.subtitulo}>
+        Beleza, autoestima e cuidado em cada detalhe.
+      </Text>
+
+      {/* Card principal */}
+      <View style={styles.card}>
+        <Texto estiloEspecifico={styles.texto}>
+          Nascida em pernambuco no ano de 1983
+          {'\n'}
+          {'\n'}
+          Nossa missão é realçar sua beleza e elevar sua autoestima
+          com carinho e atenção em cada detalhe.
+          {'\n'}
+          {'\n'}
+          Nosso objetivo é proporcionar momentos de autocuidado sem
+          que você precise sair da rotina.
+          {'\n'}
+          {'\n'}
+          Trabalhamos com dedicação para garantir unhas impecáveis,
+          atendimento acolhedor e uma experiência confortável para
+          cada cliente.
+        </Texto>
+      </View>
       {/* Imagem */}
-      <View style={styles.imagemContainer}>
+      <View style={styles.fundadoraContainer}>
         <Image
-          source={require('../assets/logo.png')}
-          style={styles.imagem}
+          source={require('../assets/Fundadora.jpg')}
+          style={styles.fundadora}
           resizeMode="contain"
         />
       </View>
@@ -129,6 +153,17 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
 
+  fundadoratitulo: {
+    alignItems: 'center',
+    paddingTop: 20,
+    paddingHorizontal: 20,
+    paddingBottom: 30,
+    color: '#FFFFFF',
+    fontSize: 32,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+
   subtitulo: {
     color: '#ffe3f0',
     fontSize: 16,
@@ -172,6 +207,19 @@ const styles = StyleSheet.create({
 
   imagem: {
     width: 390,
+    height: 250,
+    borderRadius: 20,
+    borderWidth: 3,
+    borderColor: '#ff96c5',
+  },
+
+  fundadoraContainer: {
+    alignItems: 'center',
+    marginBottom: 25,
+  },
+
+  fundadora: {
+    width: 200,
     height: 250,
     borderRadius: 20,
     borderWidth: 3,

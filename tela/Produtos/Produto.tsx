@@ -4,13 +4,7 @@ import styles from './estiloProd'
 import Texto from '../../componentes/Texto';
 
 export default function Produto({
-  produto: {
-    id,
-    nome,
-    imagem,
-    descricao
-  }
-}: any) {
+  produto: { id, nome, imagem, descricao}}: any) {
 
   return (
 

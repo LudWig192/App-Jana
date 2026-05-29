@@ -33,7 +33,7 @@ function Menu(){
                 let iconName: any;
 
                 if(route.name==="Sobre"){
-                  iconName = focused ? 'paw' : 'paw-outline';
+                  iconName = focused ? 'brush' : 'brush-outline';
                 }else if(route.name==="Produtos"){
                   iconName = focused ? 'bag' : 'bag-outline';
                 }else if(route.name==="Perfil"){
@@ -43,7 +43,7 @@ function Menu(){
               },
               headerShown: false,
               tabBarActiveTintColor: 'purple',
-              tabBarInactiveTintColor: 'gray',
+              tabBarInactiveTintColor: 'black',
             })}
           >
             <Tab.Screen name="Sobre" component={TelaSobre}/>
