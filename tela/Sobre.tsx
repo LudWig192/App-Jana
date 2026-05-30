@@ -13,9 +13,10 @@ import { VideoView, useVideoPlayer } from 'expo-video';
 import Texto from '../componentes/Texto';
 
 export default function Sobre() {
+
   // Vídeo em loop
   const player = useVideoPlayer(
-    require('../assets/Video.mp4'),
+    require('../assets/video_novo.mp4'),
     (player) => {
       player.loop = true;
     }
@@ -26,79 +27,105 @@ export default function Sobre() {
       style={styles.container}
       showsVerticalScrollIndicator={false}
     >
-      {/* Header */}
+
+      {/* HEADER */}
       <View style={styles.header}>
+
         <Image
           source={require('../assets/logo.png')}
           style={styles.logo}
           resizeMode="contain"
         />
 
-        <Text style={styles.titulo}>Sobre Nós</Text>
+        <Text style={styles.titulo}>
+          Sobre Nós
+        </Text>
 
         <Text style={styles.subtitulo}>
           Beleza, autoestima e cuidado em cada detalhe.
         </Text>
+
       </View>
 
-      {/* Card principal */}
+      {/* SOBRE */}
       <View style={styles.card}>
+
         <Texto estiloEspecifico={styles.texto}>
           Somos um salão de beleza feminino dedicado a valorizar o
           que cada mulher tem de mais único. Aqui, combinamos
           cuidado, profissionalismo e um ambiente acolhedor para
           que você se sinta especial em cada visita.
-          {'\n'}
-          {'\n'}
+          {'\n'}{'\n'}
+
           Nossa missão é realçar sua beleza e elevar sua autoestima
           com carinho e atenção em cada detalhe.
-          {'\n'}
-          {'\n'}
+          {'\n'}{'\n'}
+
           Nosso objetivo é proporcionar momentos de autocuidado sem
           que você precise sair da rotina.
-          {'\n'}
-          {'\n'}
+          {'\n'}{'\n'}
+
           Trabalhamos com dedicação para garantir unhas impecáveis,
           atendimento acolhedor e uma experiência confortável para
           cada cliente.
         </Texto>
-      </View>
-      <Text style={styles.fundadoratitulo}>Nossa Fundadora</Text>
 
-      <Text style={styles.subtitulo}>
-        Beleza, autoestima e cuidado em cada detalhe.
-      </Text>
-
-      {/* Card principal */}
-      <View style={styles.card}>
-        <Texto estiloEspecifico={styles.texto}>
-          Nascida em pernambuco no ano de 1983
-          {'\n'}
-          {'\n'}
-          Nossa missão é realçar sua beleza e elevar sua autoestima
-          com carinho e atenção em cada detalhe.
-          {'\n'}
-          {'\n'}
-          Nosso objetivo é proporcionar momentos de autocuidado sem
-          que você precise sair da rotina.
-          {'\n'}
-          {'\n'}
-          Trabalhamos com dedicação para garantir unhas impecáveis,
-          atendimento acolhedor e uma experiência confortável para
-          cada cliente.
-        </Texto>
-      </View>
-      {/* Imagem */}
-      <View style={styles.fundadoraContainer}>
-        <Image
-          source={require('../assets/Fundadora.jpg')}
-          style={styles.fundadora}
-          resizeMode="contain"
-        />
       </View>
 
-      {/* Vídeo */}
+      {/* FUNDADORA */}
+      <View style={styles.fundadoraSection}>
+
+        <Text style={styles.fundadoraTitulo}>
+          Nossa Fundadora
+        </Text>
+
+        <Text style={styles.fundadoraSubtitulo}>
+          "Eu apenas quero que minha familia esteja linda como sempre"
+        </Text>
+
+        <View style={styles.fundadoraCard}>
+
+          <Image
+            source={require('../assets/Fundadora.jpg')}
+            style={styles.fundadora}
+            resizeMode="cover"
+          />
+
+          <View style={styles.fundadoraInfo}>
+
+            <Text style={styles.nomeFundadora}>
+              Janaynna Shirlainy Tinin 
+            </Text>
+
+            <Text style={styles.cargoFundadora}>
+              Fundadora & Especialista em Beleza
+            </Text>
+
+            <Texto estiloEspecifico={styles.textoFundadora}>
+              Nascida em Pernambuco no ano de 1983, Janayna
+              sempre acreditou que a beleza vai além da aparência:
+              ela fortalece a autoestima e transforma vidas.
+              {'\n'}{'\n'}
+
+              Com anos de experiência e dedicação, criou um espaço
+              acolhedor pensado especialmente para mulheres que
+              desejam se sentir mais confiantes, belas e cuidadas.
+              {'\n'}{'\n'}
+
+              Seu trabalho é guiado pelo carinho, profissionalismo
+              e atenção aos mínimos detalhes, oferecendo uma
+              experiência única para cada cliente.
+            </Texto>
+
+          </View>
+
+        </View>
+
+      </View>
+
+      {/* VÍDEO */}
       <View style={styles.videoContainer}>
+
         <Text style={styles.videoTitulo}>
           Conheça Nosso Espaço
         </Text>
@@ -108,21 +135,26 @@ export default function Sobre() {
           style={styles.video}
           allowsPictureInPicture
         />
+
       </View>
 
-      {/* Rodapé */}
+      {/* FOOTER */}
       <View style={styles.footer}>
+
         <Text style={styles.footerTexto}>
           © 2026 Salão Feminino • Todos os direitos reservados
         </Text>
+
       </View>
 
       <StatusBar style="light" animated />
+
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#ffc0dc',
@@ -153,17 +185,6 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
 
-  fundadoratitulo: {
-    alignItems: 'center',
-    paddingTop: 20,
-    paddingHorizontal: 20,
-    paddingBottom: 30,
-    color: '#FFFFFF',
-    fontSize: 32,
-    fontWeight: 'bold',
-    marginBottom: 8,
-  },
-
   subtitulo: {
     color: '#ffe3f0',
     fontSize: 16,
@@ -171,13 +192,13 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
 
-  // CARD
+  // CARD SOBRE
   card: {
     backgroundColor: '#FFFFFF',
     marginHorizontal: 20,
     padding: 20,
     borderRadius: 24,
-    marginBottom: 25,
+    marginBottom: 30,
     borderWidth: 2,
     borderColor: '#ff96c5',
 
@@ -199,31 +220,76 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
   },
 
-  // IMAGEM
-  imagemContainer: {
-    alignItems: 'center',
-    marginBottom: 25,
+  // FUNDADORA
+  fundadoraSection: {
+    marginBottom: 35,
+    paddingHorizontal: 20,
   },
 
-  imagem: {
-    width: 390,
-    height: 250,
-    borderRadius: 20,
-    borderWidth: 3,
+  fundadoraTitulo: {
+    color: '#f70071',
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+
+  fundadoraSubtitulo: {
+    color: '#b82366',
+    fontSize: 16,
+    textAlign: 'center',
+    marginBottom: 25,
+    lineHeight: 24,
+  },
+
+  fundadoraCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 28,
+    padding: 20,
+    borderWidth: 2,
     borderColor: '#ff96c5',
-  },
 
-  fundadoraContainer: {
-    alignItems: 'center',
-    marginBottom: 25,
+    shadowColor: '#f15aa4',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+
+    elevation: 6,
   },
 
   fundadora: {
-    width: 200,
-    height: 250,
-    borderRadius: 20,
-    borderWidth: 3,
-    borderColor: '#ff96c5',
+    width: 350,
+    height: 340,
+    borderRadius: 22,
+    marginBottom: 20,
+  },
+
+  fundadoraInfo: {
+    alignItems: 'center',
+  },
+
+  nomeFundadora: {
+    color: '#f70071',
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginBottom: 6,
+  },
+
+  cargoFundadora: {
+    color: '#b82366',
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 18,
+  },
+
+  textoFundadora: {
+    color: '#5a5a5a',
+    fontSize: 16,
+    lineHeight: 28,
+    textAlign: 'justify',
   },
 
   // VÍDEO
@@ -261,4 +327,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '600',
   },
+
 });
